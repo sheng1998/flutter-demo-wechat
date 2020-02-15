@@ -31,7 +31,7 @@ class NavigationIconView {
         fontSize: 14.0,
         color: Color(AppColors.TabIconNormal)
       ),),
-      backgroundColor: Colors.white
+      backgroundColor: Colors.white,
     );
 }
 
@@ -43,6 +43,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int _currentIndex = 0;
   List<NavigationIconView> _navigationViews;
 
   void initState() {
@@ -112,9 +113,9 @@ class _HomeScreenState extends State<HomeScreen> {
         Icon(IconData(
           iconName,
           fontFamily: Constants.IconFontFamily,
-        )),
+        ), size: 22.0, color: const Color(AppColors.AppBarPopupMenuColor),),
         Container(width: 12.0),
-        Text(title)
+        Text(title, style: TextStyle(color: const Color(AppColors.AppBarPopupMenuColor),),)
       ],
     );
   }
@@ -127,11 +128,15 @@ class _HomeScreenState extends State<HomeScreen> {
       items: _navigationViews.map((NavigationIconView view) {
         return view.item;
       }).toList(),
-      currentIndex: 0,
+      currentIndex: _currentIndex,
       type: BottomNavigationBarType.fixed,
       onTap: (int index) {
-        print('点击了第 $index 个Tab');
+        setState(() {
+          _currentIndex = index;
+        });
+        // print('点击了底部导航的第 $index 个Tab');
       },
+      // backgroundColor: Colors.cyan,
     );
 
     return Scaffold(
@@ -139,6 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
       /* 顶部状态栏 */
       appBar: AppBar(
         title: Text('微信'),
+        elevation: 0, // 去除阴影
         actions: <Widget>[ // 顶部右边两个按钮
           IconButton( // 搜索功能
             icon: Icon(IconData(
@@ -180,15 +186,17 @@ class _HomeScreenState extends State<HomeScreen> {
               fontFamily: Constants.IconFontFamily,
             ), size: 22.0,),
             onSelected: (ActionItems selected) {
-              print('点击的是 $selected');
+              print('点击了下拉列表的： $selected');
             },
-            color: Colors.pink,
+            color: Color(AppColors.AppBarColor),
+            // color: Colors.cyan,
           ),
           Container(width: 16.0,),
         ],
       ),
       body: Container(
-        color: Colors.cyan
+        // color: Color(AppColors.AppBarColor),
+        color: Colors.pink,
       ),
       bottomNavigationBar: botNavBar,
     );
