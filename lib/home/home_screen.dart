@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../constants.dart' show AppColors;
 import '../constants.dart' show Constants;
 
+import './conversation_page.dart';
+
 // 枚举下拉列表的值
 enum ActionItems {
   GROUP_CHAT,
@@ -105,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     /* 初始化每个页面 */
     _pages = [
-      Container(color: Colors.pink),
+      ConversationPage(),
       Container(color: Colors.cyan),
       Container(color: Colors.yellow),
       Container(color: Colors.white),
