@@ -14,22 +14,15 @@ enum ActionItems {
 
 // 底部导航数据结构
 class NavigationIconView {
-  final String _title;
-  final IconData _icon;
-  final IconData _activeIcon;
   final BottomNavigationBarItem item;
 
   // 底部导航数据结构
   NavigationIconView({Key key, String title, IconData icon, IconData activeIcon}) :
-    this._title = title,
-    this._icon = icon,
-    this._activeIcon = activeIcon,
     this.item = BottomNavigationBarItem(
-      icon: Icon(icon, color: Color(AppColors.TabIconNormal),),
-      activeIcon: Icon(activeIcon, color: Color(AppColors.TabIconActive),),
+      icon: Icon(icon),
+      activeIcon: Icon(activeIcon),
       title: Text(title, style: TextStyle(
-        fontSize: 14.0,
-        color: Color(AppColors.TabIconNormal)
+        fontSize: 14.0
       ),),
       backgroundColor: Colors.white,
     );
@@ -43,8 +36,10 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _currentIndex = 0;
-  List<NavigationIconView> _navigationViews;
+  PageController _pageController; // 页数 0-4
+  int _currentIndex = 0; // 导航页数 0-4
+  List<NavigationIconView> _navigationViews; // 底部导航栏
+  List<Widget> _pages; // 四个页面
 
   void initState() {
     super.initState();
@@ -104,6 +99,17 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     ];
+    
+    /* 初始化四个页面 */
+    _pageController = PageController(initialPage: _currentIndex);
+
+    /* 初始化每个页面 */
+    _pages = [
+      Container(color: Colors.pink),
+      Container(color: Colors.cyan),
+      Container(color: Colors.yellow),
+      Container(color: Colors.white),
+    ];
   }
 
   /* 定义下拉列表的数据结构 */
@@ -125,6 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     /* 定义底部导航栏 */
     final BottomNavigationBar botNavBar = BottomNavigationBar(
+      fixedColor: const Color(AppColors.TabIconActive),
       items: _navigationViews.map((NavigationIconView view) {
         return view.item;
       }).toList(),
@@ -133,6 +140,9 @@ class _HomeScreenState extends State<HomeScreen> {
       onTap: (int index) {
         setState(() {
           _currentIndex = index;
+
+          _pageController.animateToPage(_currentIndex,
+          duration: Duration(milliseconds: 200), curve: Curves.easeInOut);
         });
         // print('点击了底部导航的第 $index 个Tab');
       },
@@ -194,9 +204,18 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(width: 16.0,),
         ],
       ),
-      body: Container(
-        // color: Color(AppColors.AppBarColor),
-        color: Colors.pink,
+      body: PageView.builder(
+        itemBuilder: (BuildContext context, int index) {
+          return _pages[index];
+        },
+        controller:  _pageController,
+        itemCount: _pages.length,
+        onPageChanged: (int index) {
+          setState(() {
+            _currentIndex = index;
+          });
+          // print('当前是第 $index 页');
+        },
       ),
       bottomNavigationBar: botNavBar,
     );
