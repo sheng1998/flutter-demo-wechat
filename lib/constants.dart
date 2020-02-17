@@ -102,7 +102,7 @@ class Constants {
   static const DividerWidth = 1.0; // 每条消息列表的下边框宽度
   static const UnReadMagNotifyDotSize = 20.0; // 未读消息条数背景圆圈的大小（长宽）
   static const ConversationMuteIconSize = 18.0; // 勿扰图标的大小
-  static const ContactAvatarSize = 42.0;
+  static const ContactAvatarSize = 36.0; // 通讯录图标大小
   static const TitleTextSize = 14.0; // 用户昵称的字号
   static const ContentTextSize = 20.0;
   static const DesTextSize = 12.0; // 最新一条消息描述的字号

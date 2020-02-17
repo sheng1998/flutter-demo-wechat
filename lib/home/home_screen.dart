@@ -4,6 +4,7 @@ import '../constants.dart' show AppColors;
 import '../constants.dart' show Constants;
 
 import './conversation_page.dart';
+import './contacts_page.dart';
 
 // 枚举下拉列表的值
 enum ActionItems {
@@ -108,9 +109,9 @@ class _HomeScreenState extends State<HomeScreen> {
     /* 初始化每个页面 */
     _pages = [
       ConversationPage(),
-      Container(color: Colors.cyan),
+      ContactsPage(),
       Container(color: Colors.yellow),
-      Container(color: Colors.white),
+      Container(color: Colors.cyan),
     ];
   }
 
