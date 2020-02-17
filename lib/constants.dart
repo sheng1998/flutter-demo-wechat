@@ -3,23 +3,23 @@ import 'package:flutter/material.dart';
 class AppColors {
   static const PrimaryColor = 0xffebebeb;
   static const BackgroundColor = 0xffededed;
-  static const AppBarColor = 0xff303030;
+  static const AppBarColor = 0xff303030; // 顶部 bar 的背景颜色
   static const ActionIconColor = 0xff000000;
   static const ActionMenuBgColor = 0xff4c4c4c;
   static const CardBgColor = 0xffffffff;
-  static const TabIconNormal = 0xff999999;
-  static const TabIconActive = 0xff46c11b;
-  static const AppBarPopupMenuColor = 0xffffffff;
-  static const TitleColor = 0xff181818;
-  static const ConversationItemBg = 0xffffffff;
-  static const DesTextColor = 0xff999999;
-  static const DividerColor = 0xffd5d5d5;
-  static const NotifyDotBg = 0xfff85351;
-  static const NotifyDotText = 0xffffffff;
-  static const ConversationMuteIcon = 0xffd8d8d8;
-  static const DeviceInfoItemBg = AppBarColor;
-  static const DeviceInfoItemText = 0xff606062;
-  static const DeviceInfoItemIcon = 0xff606062;
+  static const TabIconNormal = 0xff999999; // 底部 tab 默认图标和字体的颜色
+  static const TabIconActive = 0xff46c11b; // 底部 tab 激活图标和字体的颜色
+  static const AppBarPopupMenuColor = 0xffffffff; // 顶部右边加号下拉列表背景颜色
+  static const TitleColor = 0xff353535; // 用户昵称字体颜色
+  static const ConversationItemBg = 0xffffffff; // 每条消息列表的背景颜色
+  static const DesTextColor = 0xff9e9e9e; // 最新一条消息描述的字体颜色
+  static const DividerColor = 0xffd9d9d9; // 每个消息列表项的下边框颜色
+  static const NotifyDotBg = 0xffff3e3e; // 消息条数的背景颜色
+  static const NotifyDotText = 0xffffffff; // 消息条数的字体颜色
+  static const ConversationMuteIcon = 0xffd8d8d8; // 勿扰图标的颜色
+  static const DeviceInfoItemBg = 0xff5f5f5; // 其他设备登录区域背景颜色
+  static const DeviceInfoItemText = 0xff606062; // 其他设备登录区域字体颜色
+  static const DeviceInfoItemIcon = 0xff606062; // 其他设备登录区域图标颜色
   static const ContactGroupTitleBg = 0xffebebeb;
   static const ContactGroupTitleText = 0xff888888;
   static const IndexLetterBoxBg = Colors.black45;
@@ -34,22 +34,22 @@ class AppColors {
 }
 
 class AppStyles {
-  static const TitleStyle = TextStyle(
+  static const TitleStyle = TextStyle( // 用户昵称的样式
     fontSize: Constants.TitleTextSize,
     color: const Color(AppColors.TitleColor),
   );
 
-  static const DesStyle = TextStyle(
+  static const DesStyle = TextStyle( // 最新一条消息描述和时间的样式
     fontSize: Constants.DesTextSize,
     color: Color(AppColors.DesTextColor),
   );
 
-  static const UnreadMsgCountDotStyle = TextStyle(
+  static const UnreadMsgCountDotStyle = TextStyle( // 未读消息条数字体样式
     fontSize: 12.0,
     color: Color(AppColors.NotifyDotText),
   );
 
-  static const DeviceInfoItemTextStyle = TextStyle(
+  static const DeviceInfoItemTextStyle = TextStyle( // 其他设备登录区域字体样式
     fontSize: Constants.DesTextSize,
     color: Color(AppColors.DeviceInfoItemText),
   );
@@ -94,17 +94,18 @@ class Routes {
 }
 
 class Constants {
-  static const IconFontFamily = "appIconFont";
+  static const IconFontFamily = "appIconFont"; // 字体图标的名称
   static const ActionIconSize = 20.0;
   static const ActionIconSizeLarge = 32.0;
   static const AvatarRadius = 4.0;
-  static const ConversationAvatarSize = 48.0;
-  static const DividerWidth = 0.6;
-  static const ConversationMuteIconSize = 18.0;
+  static const ConversationAvatarSize = 48.0; // 用户头像的长宽
+  static const DividerWidth = 1.0; // 每条消息列表的下边框宽度
+  static const UnReadMagNotifyDotSize = 20.0; // 未读消息条数背景圆圈的大小（长宽）
+  static const ConversationMuteIconSize = 18.0; // 勿扰图标的大小
   static const ContactAvatarSize = 42.0;
-  static const TitleTextSize = 16.0;
+  static const TitleTextSize = 14.0; // 用户昵称的字号
   static const ContentTextSize = 20.0;
-  static const DesTextSize = 13.0;
+  static const DesTextSize = 12.0; // 最新一条消息描述的字号
   static const IndexBarWidth = 24.0;
   static const IndexLetterBoxSize = 114.0;
   static const IndexLetterBoxRadius = 4.0;
