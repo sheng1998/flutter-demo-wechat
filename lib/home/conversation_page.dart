@@ -126,7 +126,7 @@ class _DeviceInfoItem extends StatelessWidget {
 
   final Device device;
 
-  int get IconName {
+  int get iconName {
     return device == Device.WIN ? 0xe6b3 : 0xe61c;
   }
 
@@ -153,7 +153,7 @@ class _DeviceInfoItem extends StatelessWidget {
         children: <Widget>[
           SizedBox(width: 16.0,),
           Icon(IconData(
-            IconName,
+            iconName,
             fontFamily: Constants.IconFontFamily,
           ), color: Color(AppColors.DeviceInfoItemIcon), size: 24.0 ,),
           SizedBox(width: 16.0,),

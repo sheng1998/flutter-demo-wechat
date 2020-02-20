@@ -20,8 +20,8 @@ class AppColors {
   static const DeviceInfoItemBg = 0xff5f5f5; // 其他设备登录区域背景颜色
   static const DeviceInfoItemText = 0xff606062; // 其他设备登录区域字体颜色
   static const DeviceInfoItemIcon = 0xff606062; // 其他设备登录区域图标颜色
-  static const ContactGroupTitleBg = 0xffebebeb;
-  static const ContactGroupTitleText = 0xff888888;
+  static const ContactGroupTitleBg = 0xffebebeb; // 分组标签背景颜色
+  static const ContactGroupTitleText = 0xff888888; // 分组标签字体颜色
   static const IndexLetterBoxBg = Colors.black45;
   static const HeaderCardBg = Colors.white;
   static const HeaderCardTitleText = 0xff353535;
@@ -54,7 +54,7 @@ class AppStyles {
     color: Color(AppColors.DeviceInfoItemText),
   );
 
-  static const GroupTitleItemTextStyle = TextStyle(
+  static const GroupTitleItemTextStyle = TextStyle( // 分组标签字体样式
     fontSize: 14.0,
     color: Color(AppColors.ContactGroupTitleText),
   );

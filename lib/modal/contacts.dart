@@ -15,7 +15,7 @@ class Contact {
 class ContactsPageData {
   final List<Contact> contacts = [
     const Contact(
-      avatar: 'http://www.17qq.com/img_qqtouxiang/79764888.jpeg',
+      avatar: 'https://www.ruan8.com/uploadimg/image/20181024/20181024095635_38496.jpg',
       name: 'Maurice Sutton',
       nameIndex: 'M',
     ),

@@ -108,7 +108,7 @@ class ConversationPageData {
       unreadMsgCount: 99,
     ),
     const Conversation(
-      avatar: 'http://image.biaobaiju.com/uploads/20180802/01/1533144547-HjKwoGUqyr.jpg',
+      avatar: 'https://pic.qqtn.com/up/2018-12/2018122708065061900.jpg',
       title: '汤姆丁',
       des: '今晚要一起去吃肯德基吗？',
       updateAt: '17:56',
