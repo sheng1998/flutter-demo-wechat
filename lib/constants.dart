@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static const PrimaryColor = 0xffebebeb;
-  static const BackgroundColor = 0xffededed;
+  static const BackgroundColor = 0xffededed; // 背景颜色
   static const AppBarColor = 0xff303030; // 顶部 bar 的背景颜色
   static const ActionIconColor = 0xff000000;
   static const ActionMenuBgColor = 0xff4c4c4c;
@@ -106,10 +106,9 @@ class Constants {
   static const TitleTextSize = 14.0; // 用户昵称的字号
   static const ContentTextSize = 20.0;
   static const DesTextSize = 12.0; // 最新一条消息描述的字号
-  static const IndexBarWidth = 24.0;
+  static const IndexBarWidth = 24.0; // 通讯录右边字母导航条的宽度
   static const IndexLetterBoxSize = 114.0;
   static const IndexLetterBoxRadius = 4.0;
-  static const FullWidthIconButtonIconSize = 25.0;
   static const ChatBoxHeight = 48.0;
 
   static const String MENU_MARK_AS_UNREAD = 'MENU_MARK_AS_UNREAD';
