@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart' show AppColors, Constants;
+import '../constants.dart' show AppColors, Constants, AppStyles;
 
 class FullWidthButton extends StatelessWidget {
   static const ICON_SIZE = 24.0;
@@ -13,6 +13,7 @@ class FullWidthButton extends StatelessWidget {
     @required this.title,
     @required this.onPressed,
     this.showDivider : false,
+    this.des,
   }) : assert(iconPath != null),
        assert(title != null),
        assert(onPressed != null);
@@ -21,6 +22,7 @@ class FullWidthButton extends StatelessWidget {
   final String title;
   final VoidCallback onPressed;
   final bool showDivider;
+  final String des;
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +35,19 @@ class FullWidthButton extends StatelessWidget {
           height: ICON_SIZE,
         ),
         SizedBox(width: HORIZONTAL_PADDING,),
-        Text(title)
+        Expanded(child: Text(title)),
       ],
     );
+
+    /* 处理提示信息 */
+    if (this.des != null) {
+      pureButton.children.add(
+        Text(
+          this.des,
+          style: AppStyles.ButtonDesTextStyle,
+        )
+      );
+    }
 
     final borderButton = Container(
       decoration:  BoxDecoration(

@@ -6,6 +6,7 @@ import '../constants.dart' show Constants;
 import './conversation_page.dart';
 import './contacts_page.dart';
 import './discover_page.dart';
+import 'functions_page.dart';
 
 // 枚举下拉列表的值
 enum ActionItems {
@@ -112,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ConversationPage(),
       ContactsPage(),
       DiscoverPage(),
-      Container(color: Colors.cyan),
+      FunctionsPage(),
     ];
   }
 

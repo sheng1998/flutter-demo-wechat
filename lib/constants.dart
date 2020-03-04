@@ -23,10 +23,13 @@ class AppColors {
   static const ContactGroupTitleBg = 0xffebebeb; // 分组标签背景颜色
   static const ContactGroupTitleText = 0xff888888; // 分组标签字体颜色
   static const IndexLetterBoxBg = Colors.black45;
-  static const HeaderCardBg = Colors.white;
-  static const HeaderCardTitleText = 0xff353535;
-  static const HeaderCardDesText = 0xff7f7f7f;
-  static const ButtonDesText = 0xff8c8c8c;
+
+  /* 我的页面 */
+  static const HeaderCardBg = Colors.white; // 头部背景颜色
+  static const HeaderCardTitleText = 0xff353535; // 头部昵称字体颜色
+  static const HeaderCardDesText = 0xff7f7f7f; // 头部账号字体颜色
+  static const ButtonDesText = 0xff8c8c8c; // 提示信息
+
   static const ButtonArrowColor = 0xffadadad;
   static const NewTagBg = 0xfffa5251;
   static const ChatBoxBg = 0xfff7f7f7;
@@ -62,17 +65,17 @@ class AppStyles {
   static const IndexLetterBoxTextStyle =
       TextStyle(fontSize: 64.0, color: Colors.white);
 
-  static const HeaderCardTitleTextStyle = TextStyle(
+  static const HeaderCardTitleTextStyle = TextStyle( // 我的页面昵称字体样式
       fontSize: 20.0,
       color: Color(AppColors.HeaderCardTitleText),
       fontWeight: FontWeight.bold);
 
-  static const HeaderCardDesTextStyle = TextStyle(
+  static const HeaderCardDesTextStyle = TextStyle(  // 我的页面账号字体样式
       fontSize: 14.0,
       color: Color(AppColors.HeaderCardDesText),
       fontWeight: FontWeight.normal);
 
-  static const ButtonDesTextStyle = TextStyle(
+  static const ButtonDesTextStyle = TextStyle( // 提示信息字体样式
       fontSize: 12.0,
       color: Color(AppColors.ButtonDesText),
       fontWeight: FontWeight.bold);
