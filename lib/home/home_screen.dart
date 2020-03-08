@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart' show AppColors;
-import '../constants.dart' show Constants;
-
+import '../constants.dart' show AppColors, Constants;
 import './conversation_page.dart';
 import './contacts_page.dart';
 import './discover_page.dart';

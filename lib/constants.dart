@@ -22,7 +22,7 @@ class AppColors {
   static const DeviceInfoItemIcon = 0xff606062; // 其他设备登录区域图标颜色
   static const ContactGroupTitleBg = 0xffebebeb; // 分组标签背景颜色
   static const ContactGroupTitleText = 0xff888888; // 分组标签字体颜色
-  static const IndexLetterBoxBg = Colors.black45;
+  static const IndexLetterBoxBg = Colors.black45; // 检索控件选中时弹出块背景颜色
 
   /* 我的页面 */
   static const HeaderCardBg = Colors.white; // 头部背景颜色
@@ -63,7 +63,7 @@ class AppStyles {
   );
 
   static const IndexLetterBoxTextStyle =
-      TextStyle(fontSize: 64.0, color: Colors.white);
+      TextStyle(fontSize: 64.0, color: Colors.white);  // 检索控件选中时弹出块字体颜色
 
   static const HeaderCardTitleTextStyle = TextStyle( // 我的页面昵称字体样式
       fontSize: 20.0,
@@ -110,8 +110,8 @@ class Constants {
   static const ContentTextSize = 20.0;
   static const DesTextSize = 12.0; // 最新一条消息描述的字号
   static const IndexBarWidth = 24.0; // 通讯录右边字母导航条的宽度
-  static const IndexLetterBoxSize = 114.0;
-  static const IndexLetterBoxRadius = 4.0;
+  static const IndexLetterBoxSize = 114.0;  // 检索控件选中时弹出块盒子长宽
+  static const IndexLetterBoxRadius = 4.0; // 检索控件选中时弹出块圆角边框
   static const ChatBoxHeight = 48.0;
 
   static const String MENU_MARK_AS_UNREAD = 'MENU_MARK_AS_UNREAD';
